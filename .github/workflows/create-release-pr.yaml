@@ -12,7 +12,7 @@ permissions:
 env:
   VERSION: ${{ github.event.inputs.version }}
 jobs:
-  prepare:
+  update_version:
     runs-on: ubuntu-latest
     if: ${{ github.event.inputs.version != '' }}
     steps:
