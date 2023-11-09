@@ -1,4 +1,4 @@
-name: Release
+name: Draft Release
 on:
   pull_request:
     types: [closed]
@@ -34,4 +34,3 @@ jobs:
         run: gh release create --draft --title "v${VERSION}" "v${VERSION}"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
